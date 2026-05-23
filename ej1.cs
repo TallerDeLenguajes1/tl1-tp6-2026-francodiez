@@ -1,5 +1,5 @@
 //Ejercicio 1, para usar pongo en comentarios cualquier otro .cs
-int a=0; //le doy valor inicial porque para el segundo while el programa no se asegura si llega un valor
+/*int a=0; //le doy valor inicial porque para el segundo while el programa no se asegura si llega un valor
 string c;
 int invertido=0;
 int digito;
@@ -23,7 +23,7 @@ while (a>=1)
     a=a/10;
     invertido=invertido*10 + digito;
 }
-Console.WriteLine("Valor invertido:"+invertido);
+Console.WriteLine("Valor invertido:"+invertido);*/
 
 
 
