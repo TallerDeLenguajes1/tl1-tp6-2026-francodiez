@@ -1,3 +1,4 @@
+Nota: Accidentalmente hice push del codigo del ejercicio 4 en la rama de CalculadoraV1
 ### 1
 El tipo String es un tipo por referencia. Una cadena es un objeto de tipo String cuyo valor es texto. Internamente, el texto se almacena
 como una colección secuencial de solo lectura de objetos Char. Una variable no contiene la instancia directamente, sino una
