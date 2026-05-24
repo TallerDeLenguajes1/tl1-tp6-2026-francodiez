@@ -1,4 +1,4 @@
-bool opera=true;
+/*bool opera=true;
 bool NoPermitido=true;
 int opcion=0;
 float a;
@@ -194,4 +194,4 @@ float Dividir(float a,float b)
 {
     float division=a/b;
     return division;
-}
+} */
