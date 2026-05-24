@@ -4,8 +4,14 @@ string concatenacion;
 int longitud;
 float n1;
 float n2;
-float resultado;
 int opcion;
+bool existe;
+string[] sepcadena;
+char[] operadores = { '+', '-', '*', '/' };
+char operador;
+int indiceOperador;
+string primerSegmento;
+string segundoSegmento;
 
 Console.WriteLine("Ingrese una cadena de texto");
 texto=Console.ReadLine();
@@ -29,6 +35,59 @@ if (opcion==4 && n2 == 0)
 } else
 {
     Calculadora(n1,n2,opcion);
+}
+Console.WriteLine("Cada elemento del texto original: ");
+foreach(char a in texto)
+{
+    Console.WriteLine(a);
+} 
+Console.WriteLine("Busque una palabra en la cadena y se indicara si se encuentra o no");
+existe=texto.Contains(Console.ReadLine());
+if (existe)
+{
+    Console.WriteLine("Si se encuentra la palabra en la cadena");
+}
+else
+{
+    Console.WriteLine("No se encuentra la palabra en la cadena");
+} 
+Console.WriteLine($"Cadena en mayusculas: {texto.ToUpper()}");
+Console.WriteLine($"Cadena en minusculas: {texto.ToLower()}"); 
+//voy a separar como caracter separador la coma ,
+Console.WriteLine("Ingrese una cadena con palabras separadas con la coma");
+texto=Console.ReadLine();
+sepcadena=texto.Split(',');
+foreach(string elemento in sepcadena)
+{
+    Console.WriteLine($"Elemento: {elemento}");
+} 
+Console.WriteLine("Ingrese una ecuacion simple como cadena de caracteres (suma,resta,multiplicacion o division)");
+texto=Console.ReadLine();
+indiceOperador=texto.IndexOfAny(operadores);
+if (indiceOperador != -1)
+{
+    operador = texto[indiceOperador];
+    // Desde el inicio (0) hasta antes del operador
+    primerSegmento = texto.Substring(0, indiceOperador);
+    // Desde después del operador hasta el final
+    segundoSegmento = texto.Substring(indiceOperador + 1);
+    n1=float.Parse(primerSegmento);
+    n2=float.Parse(segundoSegmento);
+    switch (operador)
+    {
+        case '+':
+        Calculadora(n1,n2,1);
+        break;
+        case '-':
+        Calculadora(n1,n2,2);
+        break;
+        case '*':
+        Calculadora(n1,n2,3);
+        break;
+        case '/':
+        Calculadora(n1,n2,4);
+        break;
+    }
 }
 
 
